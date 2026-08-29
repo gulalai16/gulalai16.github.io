@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Creative portfolio showcasing web development, data projects, and financial applications.">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%236366f1'>P</text></svg>">
+    <link rel="stylesheet" href="copilot.css">
+    <script src="copilot.js" defer></script>
+    <title>Portfolio - Web & Data Projects</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="header-top">
+                <a class="profile" href="#main-content" aria-label="Portfolio home">My<span>Profile</span></a>
+                <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <nav id="site-navigation" aria-label="Primary navigation">
+                <ul class="nav-menu" id="primary-navigation">
+                    <li><a href="#main-content">Home</a></li>
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+    <section id="about-me" role="region" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>I am a curious and dedicated person who enjoys learning new things, solving problems, and creating meaningful work.</p>
+    </section>
+
+    <section id="skills" role="region" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Skills</h2>
+        <ul>
+            <li>HTML and semantic markup</li>
+            <li>CSS and responsive design</li>
+            <li>JavaScript</li>
+            <li>Accessible user interfaces</li>
+            <li>Git and version control</li>
+            <li>Problem solving and debugging</li>
+        </ul>
+    </section>
+
+    <section id="projects" role="region" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Projects</h2>
+        <p id="project-status" role="status" aria-live="polite"></p>
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+            <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All Projects</button>
+            <button type="button" class="filter-button" data-filter="web" aria-pressed="false">Web</button>
+            <button type="button" class="filter-button" data-filter="data" aria-pressed="false">Data</button>
+            <button type="button" class="filter-button" data-filter="finance" aria-pressed="false">Finance</button>
+        </div>
+
+        <article class="project-card" data-category="web">
+            <figure>
+                <img class="project-image" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Laptop displaying code for the TaskFlow project" tabindex="0" aria-label="Open a larger view of the TaskFlow project image">
+                <figcaption>Task management app</figcaption>
+            </figure>
+            <h3>TaskFlow</h3>
+            <p>A responsive task management app with project boards, task filtering, and progress tracking.</p>
+            <button type="button" data-project="TaskFlow" data-project-id="1" aria-label="View the TaskFlow project">View Project</button>
+        </article>
+
+        <article class="project-card" data-category="data">
+            <figure>
+                <img class="project-image" src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80" alt="Cloudy sky representing the Weather Dashboard project" tabindex="0" aria-label="Open a larger view of the Weather Dashboard project image">
+                <figcaption>Weather dashboard</figcaption>
+            </figure>
+            <h3>Weather Dashboard</h3>
+            <p>A location-based weather dashboard that uses an API to display current conditions and a multi-day forecast.</p>
+            <button type="button" data-project="Weather Dashboard" data-project-id="2" aria-label="View the Weather Dashboard project">View Project</button>
+        </article>
+
+        <article class="project-card" data-category="finance">
+            <figure>
+                <img class="project-image" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80" alt="Calculator, notebook, and financial charts for the Personal Finance Tracker project" tabindex="0" aria-label="Open a larger view of the Personal Finance Tracker project image">
+                <figcaption>Finance tracker</figcaption>
+            </figure>
+            <h3>Personal Finance Tracker</h3>
+            <p>A simple budgeting tool for recording expenses, organizing spending categories, and viewing monthly summaries.</p>
+            <button type="button" data-project="Personal Finance Tracker" data-project-id="3" aria-label="View the Personal Finance Tracker project">View Project</button>
+        </article>
+    </section>
+
+    <section id="contact" role="region" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <form action="#" method="post" aria-labelledby="contact-heading" novalidate>
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" aria-describedby="name-error" required>
+                <span class="field-error" id="name-error" role="alert" hidden></span>
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" aria-describedby="email-error" required>
+                <span class="field-error" id="email-error" role="alert" hidden></span>
+            </p>
+            <p>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" aria-describedby="message-error" required></textarea>
+                <span class="field-error" id="message-error" role="alert" hidden></span>
+            </p>
+            <p id="contact-status" role="status" aria-live="polite"></p>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    </main>
+
+    <div class="lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+        <div class="lightbox-content">
+            <button class="lightbox-close" type="button" aria-label="Close image viewer">Close</button>
+            <h2 id="lightbox-title">Project image</h2>
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+</body>
+</html>
